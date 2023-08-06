@@ -1,0 +1,25 @@
+.col-id {
+  .material-icons {
+    color: $primary;
+    font-size: 18px;
+    // vertical-align: middle;
+  }
+}
+
+.table-actions {
+  .material-icons {
+    cursor: pointer;
+    vertical-align: middle;
+    &:hover, &:active, &:focus {
+      color: $primary;
+    }
+  }
+}
+
+thead {
+  border-color: $gray-900;
+  th {
+    padding-bottom: 4px;
+    padding-top: 0;
+  }
+}

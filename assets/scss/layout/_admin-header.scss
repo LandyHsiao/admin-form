@@ -1,0 +1,30 @@
+.main-title {
+  vertical-align: middle;
+  line-height: calc(33 / 24);
+}
+
+.add-admin-button {
+  border-radius: 0;
+  border: 0;
+  padding: 2px 0;
+  &::before {
+    content: '\e145';
+    font-family: "Material Icons";
+    color: $primary;
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &:hover, &:active, &:focus {
+    border: 0;
+    outline: 0;
+    color: $primary;
+  }
+}
+
+.header-right > * {
+  cursor: pointer;
+  &:hover, &:active, &:focus {
+    color: $primary;
+  }
+}

@@ -32,10 +32,13 @@
 // @import "utils/mixin";
 
 // import components stylesheets from here
-// @import "components/buttons";
+@import "components/buttons";
+@import "components/pagination";
 
 // import layout stylesheet from here
 @import "layout/side-bar";
+@import "layout/admin-header";
 // @import "layout/footer";
 
 // import pages stylesheet from here
+@import "page/admin";

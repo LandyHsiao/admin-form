@@ -11,12 +11,133 @@
       crossorigin="anonymous">
   </script>
 </head>
-<body>
+<body class="d-flex">
   <%- include('./layout/side-bar.ejs'); -%>
   
-  <main class="l-main-area container">
+  <main class="l-main-area container-lg p-8 d-flex flex-column">
     <%- include('./layout/admin-header.ejs'); -%>
+    <div class="main-content-area d-flex flex-column justify-content-between flex-grow-1">
+      <table class="admin-list table table-hover mt-4 align-middle">
+        <thead>
+          <tr>
+            <th scope="col" class="col-id col-1 align-middle">ID<span class=" material-icons ms-2 align-bottom">arrow_downward</span></th>
+            <th scope="col" class="col-name col-3">Name</th>
+            <th scope="col" class="col-email col-4">Email</th>
+            <th scope="col" class="col-verified col-2">Verified</th>
+            <th scope="col" class="col-button col-2 text-end"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr >
+            <td class="py-5">#1</td>
+            <td>Emir Wicks</td>
+            <td>emir.wicks@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end table-actions"><span class="material-icons me-6">visibility</span><span class="material-icons">edit</span></td>
+          </tr>
+          <tr>
+            <td class="py-5">#2</td>
+            <td>Zaina Goldsmith</td>
+            <td>zaina.goldsmith@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end table-actions"><span class="material-icons me-6">visibility</span><span class="material-icons">edit</span></td>
+          </tr>
+          <tr>
+            <td class="py-5">#3</td>
+            <td>Mahima Lopez</td>
+            <td>mahima.lopez@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end table-actions"><span class="material-icons me-6">visibility</span><span class="material-icons">edit</span></td>
+          </tr>
+          <tr>
+            <td class="py-5">#4</td>
+            <td>Pharrell Murray</td>
+            <td>pharrell.murray@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end table-actions"><span class="material-icons me-6">visibility</span><span class="material-icons">edit</span></td>
+          </tr>
+          <tr>
+            <td class="py-5">#5</td>
+            <td>Annika Mcbride</td>
+            <td>annika.mcbride@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end table-actions"><span class="material-icons me-6">visibility</span><span class="material-icons">edit</span></td>
+          </tr>
+          <tr>
+            <td class="py-5">#6</td>
+            <td>Fatimah Clark</td>
+            <td>fatimah.clark@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end table-actions"><span class="material-icons me-6">visibility</span><span class="material-icons">edit</span></td>
+          </tr>
+          <tr>
+            <td class="py-5">#7</td>
+            <td>Klaudia Rhodes</td>
+            <td>klaudia.rhodes@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end table-actions"><span class="material-icons me-6">visibility</span><span class="material-icons">edit</span></td>
+          </tr>
+          <tr>
+            <td class="py-5">#8</td>
+            <td>Tillie Lucero</td>
+            <td>tillie.lucero@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end table-actions"><span class="material-icons me-6">visibility</span><span class="material-icons">edit</span></td>
+          </tr>
+          <tr>
+            <td class="py-5">#9</td>
+            <td>Sabrina Stephenson</td>
+            <td>sabrina.stephenson@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end table-actions"><span class="material-icons me-6">visibility</span><span class="material-icons">edit</span></td>
+          </tr>
+          <tr>
+            <td class="py-5">#10</td>
+            <td>Annie Smith</td>
+            <td>annie.smith@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end table-actions"><span class="material-icons me-6">visibility</span><span class="material-icons">edit</span></td>
+          </tr>
+          
+        </tbody>
+      </table>
+      <nav class="ms-auto fw-bold">
+        <ul class="pagination text-center mb-0">
+          <li class="page-item">
+            <a class="page-link chevron" href="#" aria-label="Previous">
+              <span aria-hidden="true" class="material-icons fs-6 align-middle fw-bold">chevron_left</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link chevron" href="#" aria-label="Next">
+              <span aria-hidden="true" class="material-icons fs-6 align-middle fw-bold">chevron_right</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+  </div>
   </main>
+
+  <div class="modal" tabindex="-1" id="addAdminModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script type="module" src="../main.js"></script>
   <script>
@@ -24,6 +145,12 @@
     $('#nav-admin').toggleClass("ps-8");
     $('#nav-admin').toggleClass("ps-7");
     $('#nav-admin').attr( "aria-current", "page" );
+
+    // const addAdminModal = document.getElementById('myModal')
+    // const addAdmin = document.getElementById('add-admin')
+    // addAdminModal.addEventListener('shown.bs.modal', () => {
+    //   addAdmin.focus()
+    // })
   </script>
 </body>
 </html>
