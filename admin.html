@@ -3,78 +3,214 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Answer</title>
+  <title>Answer - Admin</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script
       src="https://code.jquery.com/jquery-3.7.0.min.js"
       integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
       crossorigin="anonymous">
-    </script>
-  <script type="module" crossorigin src="/admin-form/assets/admin-5711e66f.js"></script>
-  <link rel="stylesheet" href="/admin-form/assets/admin-ee35f9e9.css">
+  </script>
+  <script type="module" crossorigin src="/admin-form/assets/main-3eaf86cb.js"></script>
+  <link rel="stylesheet" href="/admin-form/assets/main-8985a604.css">
 </head>
-<body>
-  
-  <aside class="side-bar d-flex flex-column justify-content-between vh-100">
-    <div class="side-bar__top-content pt-8 pe-8">
-      <h1 class="nav-title ms-8"><a href="">ANSWER</a></h1>
-      <nav class="navbar">
-        <ul class="nav flex-column">
-          <li class="nav-item mb-6 ps-8 py-2" id="nav-dashboard">
-            <a href="" class="nav-link-wrap d-flex">
-              <span class="nav-icons material-icons me-4">assessment</span>
-              <span class="nav-item-title">Dashboard</span>
+<body class="d-flex">
+  <aside class="side-bar d-flex flex-column justify-content-between vh-100 bg-secondary">
+  <div class="side-bar__top-content pt-8 pe-8">
+    <h1 class="nav-title ms-8 mb-7 "><a href="">ANSWER</a></h1>
+    <nav class="navbar">
+      <ul class="nav flex-column">
+        <li class="nav-item mb-6 ps-8 py-2" id="nav-dashboard">
+          <a href="" class="nav-link-wrap d-flex">
+            <span class="nav-icons material-icons me-4">assessment</span>
+            <span class="nav-item-title">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item mb-6 ps-8 py-2" id="nav-question">
+          <a href="" class="nav-link-wrap d-flex">
+            <span class="nav-icons material-icons me-4">question_answer</span>
+            <span class="nav-item-title">Question</span>
+          </a>
+        </li>
+        <li class="nav-item mb-6 ps-8 py-2" id="nav-assignment">
+          <a href="./assignment.html" class="nav-link-wrap d-flex">
+            <span class="nav-icons material-icons me-4">assignment</span>
+            <span class="nav-item-title">Assignment</span>
+          </a>
+        </li>
+        <li class="nav-item mb-6 ps-8 py-2" id="nav-course">
+          <a href="" class="nav-link-wrap-wrap d-flex">
+            <span class="nav-icons material-icons me-4">video_library</span>
+            <span class="nav-item-title">Course</span>
+          </a>
+        </li>
+        <li class="nav-item mb-6 ps-8 py-2" id="nav-admin">
+          <a href="./admin.html" class="nav-link-wrap d-flex">
+            <span class="nav-icons material-icons me-4">people</span>
+            <span class="nav-item-title">Admin</span>
+          </a>
+        </li>
+        <li class="nav-item ps-8 py-2" id="nav-settings">
+          <a href="" class="nav-link-wrap d-flex">
+            <span class="nav-icons material-icons me-4">settings</span>
+            <span class="nav-item-title">Settings</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="side-bar__bottom-content d-flex align-items-center px-8 pb-8">
+    <div class="user-img me-4"></div>
+    <div class="user-info">
+      <p class="user-name mb-1">Andy Chen</p>
+      <p class="user-email mb-0">andy0401@mail.com</p>
+    </div>
+  </div>
+</aside>  
+  <main class="l-main-area container-lg p-8 d-flex flex-column">
+    <div class="main-header-area pb-4 d-flex justify-content-between align-center">
+  <div class="header-left d-flex align-center">
+    <h2 class="main-title mb-0 fw-bold fs-4 me-12">Admin</h2>
+    <button class="add-admin-button btn fw-bold align-middle" id="add-admin" data-bs-toggle="modal" data-bs-target="#addAdminModal">Add New Admin</button>
+  </div>
+  <div class="header-right align-center">
+    <span class="material-icons me-8">search</span>
+    <span class="material-icons">notifications_active</span>
+  </div>
+</div>    <div class="main-content-area d-flex flex-column justify-content-between flex-grow-1">
+      <table class="admin-list table table-hover mt-4 align-middle">
+        <thead>
+          <tr>
+            <th scope="col" class="col-id col-1 align-middle">ID<span class=" material-icons ms-2 align-bottom">arrow_downward</span></th>
+            <th scope="col" class="col-name col-3">Name</th>
+            <th scope="col" class="col-email col-4">Email</th>
+            <th scope="col" class="col-verified col-2">Verified</th>
+            <th scope="col" class="col-button col-2 text-end"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr >
+            <td class="py-5">#1</td>
+            <td>Emir Wicks</td>
+            <td>emir.wicks@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end table-actions"><span class="material-icons me-6">visibility</span><span class="material-icons">edit</span></td>
+          </tr>
+          <tr>
+            <td class="py-5">#2</td>
+            <td>Zaina Goldsmith</td>
+            <td>zaina.goldsmith@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end table-actions"><span class="material-icons me-6">visibility</span><span class="material-icons">edit</span></td>
+          </tr>
+          <tr>
+            <td class="py-5">#3</td>
+            <td>Mahima Lopez</td>
+            <td>mahima.lopez@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end table-actions"><span class="material-icons me-6">visibility</span><span class="material-icons">edit</span></td>
+          </tr>
+          <tr>
+            <td class="py-5">#4</td>
+            <td>Pharrell Murray</td>
+            <td>pharrell.murray@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end table-actions"><span class="material-icons me-6">visibility</span><span class="material-icons">edit</span></td>
+          </tr>
+          <tr>
+            <td class="py-5">#5</td>
+            <td>Annika Mcbride</td>
+            <td>annika.mcbride@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end table-actions"><span class="material-icons me-6">visibility</span><span class="material-icons">edit</span></td>
+          </tr>
+          <tr>
+            <td class="py-5">#6</td>
+            <td>Fatimah Clark</td>
+            <td>fatimah.clark@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end table-actions"><span class="material-icons me-6">visibility</span><span class="material-icons">edit</span></td>
+          </tr>
+          <tr>
+            <td class="py-5">#7</td>
+            <td>Klaudia Rhodes</td>
+            <td>klaudia.rhodes@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end table-actions"><span class="material-icons me-6">visibility</span><span class="material-icons">edit</span></td>
+          </tr>
+          <tr>
+            <td class="py-5">#8</td>
+            <td>Tillie Lucero</td>
+            <td>tillie.lucero@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end table-actions"><span class="material-icons me-6">visibility</span><span class="material-icons">edit</span></td>
+          </tr>
+          <tr>
+            <td class="py-5">#9</td>
+            <td>Sabrina Stephenson</td>
+            <td>sabrina.stephenson@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end table-actions"><span class="material-icons me-6">visibility</span><span class="material-icons">edit</span></td>
+          </tr>
+          <tr>
+            <td class="py-5">#10</td>
+            <td>Annie Smith</td>
+            <td>annie.smith@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end table-actions"><span class="material-icons me-6">visibility</span><span class="material-icons">edit</span></td>
+          </tr>
+          
+        </tbody>
+      </table>
+      <nav class="ms-auto fw-bold">
+        <ul class="pagination text-center mb-0">
+          <li class="page-item">
+            <a class="page-link chevron" href="#" aria-label="Previous">
+              <span aria-hidden="true" class="material-icons fs-6 align-middle fw-bold">chevron_left</span>
             </a>
           </li>
-          <li class="nav-item mb-6 ps-8 py-2" id="nav-question">
-            <a href="" class="nav-link-wrap d-flex">
-              <span class="nav-icons material-icons me-4">question_answer</span>
-              <span class="nav-item-title">Question</span>
-            </a>
-          </li>
-          <li class="nav-item mb-6 ps-8 py-2" id="nav-assignment">
-            <a href="" class="nav-link-wrap d-flex">
-              <span class="nav-icons material-icons me-4">assignment</span>
-              <span class="nav-item-title">Assignment</span>
-            </a>
-          </li>
-          <li class="nav-item mb-6 ps-8 py-2" id="nav-course">
-            <a href="" class="nav-link-wrap-wrap d-flex">
-              <span class="nav-icons material-icons me-4">video_library</span>
-              <span class="nav-item-title">Course</span>
-            </a>
-          </li>
-          <li class="nav-item mb-6 ps-8 py-2" id="nav-admin">
-            <a href="./admin.html" class="nav-link-wrap d-flex">
-              <span class="nav-icons material-icons me-4">people</span>
-              <span class="nav-item-title">Admin</span>
-            </a>
-          </li>
-          <li class="nav-item ps-8 py-2" id="nav-settings">
-            <a href="" class="nav-link-wrap d-flex">
-              <span class="nav-icons material-icons me-4">settings</span>
-              <span class="nav-item-title">Settings</span>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link chevron" href="#" aria-label="Next">
+              <span aria-hidden="true" class="material-icons fs-6 align-middle fw-bold">chevron_right</span>
             </a>
           </li>
         </ul>
       </nav>
-    </div>
-    <div class="side-bar__bottom-content d-flex align-items-center px-8 pb-8">
-      <div class="user-img me-4"></div>
-      <div class="user-info">
-        <p class="user-name mb-1">Andy Chen</p>
-        <p class="user-email mb-0">andy0401@mail.com</p>
+  </div>
+  </main>
+
+  <div class="modal" tabindex="-1" id="addAdminModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
       </div>
     </div>
-  </aside>
-  <main class="l-main-area container">
-    test
-  </main>
+  </div>
 
   
   <script>
     $('#nav-admin').toggleClass("active");
+    $('#nav-admin').toggleClass("ps-8");
+    $('#nav-admin').toggleClass("ps-7");
     $('#nav-admin').attr( "aria-current", "page" );
+
+    // const addAdminModal = document.getElementById('myModal')
+    // const addAdmin = document.getElementById('add-admin')
+    // addAdminModal.addEventListener('shown.bs.modal', () => {
+    //   addAdmin.focus()
+    // })
   </script>
 </body>
 </html>
