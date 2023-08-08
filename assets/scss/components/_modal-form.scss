@@ -1,0 +1,51 @@
+.modal {
+  .form-label {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  .edit-modal__verification-lable-verified {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    &::before {
+      content: '\e86c';
+      color: $primary;
+      font-family: "Material Icons";
+      font-size: 20px;
+      top: 5px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+  }
+  .form-select {
+    background-color: $white;
+    border-color: #212529;
+    border-radius: 0;
+    border-width: 1px;
+  }
+  .form-control:disabled {
+    border-width: 1px;
+  }
+  .edit__deactive-label {
+    &::before {
+      content: '\e002';
+      color: $danger;
+      font-family: "Material Icons";
+      font-size: 20px;
+      top: 5px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+  }
+  .btn {
+    padding: 8px 32px;
+  }
+}
+
+.modal-body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
